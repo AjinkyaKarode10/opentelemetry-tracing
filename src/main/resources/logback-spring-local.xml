@@ -5,7 +5,7 @@
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
 <!--            <pattern>%clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(-&#45;&#45;){faint} %clr([%15.15t]){faint} %clr(%mdc{traceInfo}){yellow} %clr(%mdc{correlationId}){black} %clr(%mdc{LOG_KEY}){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wex</pattern>-->
-            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %mdc{traceInfo} %mdc{correlationIdNew} %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %mdc{traceInfo} %msg%n</pattern>
         </encoder>
     </appender>
 
