@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="1 minute" debug="true">
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+<!--            <pattern>%clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %clr(-&#45;&#45;){faint} %clr([%15.15t]){faint} %clr(%mdc{traceInfo}){yellow} %clr(%mdc{correlationId}){black} %clr(%mdc{LOG_KEY}){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n%wex</pattern>-->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %mdc{traceInfo} %mdc{correlationIdNew} %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.apache.hc.client5.http" level="ERROR"/>
+    <logger name="org.apache.hc.client5.http.impl" level="ERROR"/>
+    <logger name="org.apache.hc.client5.http.wire" level="ERROR"/>
+
+    <logger name="com.example.trace" level="INFO"/>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+</configuration>

@@ -1,0 +1,7 @@
+logging:
+  config: ${LOGGING_CONFIG:classpath:logback-spring-local.xml}
+  request-logger:
+    include-client-info: true
+    include-query-string: true
+    include-payload: false
+    include-headers: true
